@@ -1,0 +1,82 @@
+body {
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contaienr {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.butoane {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: flex-end;
+}
+
+.podea {
+    width: 300px;
+    background-color: white;
+    height: 20px;
+}
+
+.butoane div {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    animation: animatie 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.butoane div:nth-child(1) {
+    animation-delay: 0;
+    ;
+}
+
+.butoane div:nth-child(2) {
+    animation-delay: 0.5s;
+    ;
+}
+
+.butoane div:nth-child(3) {
+    animation-delay: 0.9s;
+    ;
+}
+
+.butoane div:nth-child(4) {
+    animation-delay: 1.3s;
+    ;
+}
+
+.butoane div:nth-child(5) {
+    animation-delay: 1.5s;
+    ;
+}
+
+.butoane span {
+    border-radius: 100%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+@keyframes animatie {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

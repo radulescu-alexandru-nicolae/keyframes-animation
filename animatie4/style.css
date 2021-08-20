@@ -1,0 +1,31 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: changeculoare 12s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+div {
+    color: white;
+}
+
+@keyframes changeculoare {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: blue;
+    }
+    50% {
+        background-color: green;
+    }
+    75% {
+        background-color: purple;
+    }
+    100% {
+        background-color: brown;
+    }
+}

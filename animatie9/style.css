@@ -1,0 +1,61 @@
+body {
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    color: white;
+    font-size: 15px;
+    position: relative;
+}
+
+div::after {
+    content: 'TRANFORMS';
+    position: absolute;
+    top: 15px;
+    left: 120%;
+    color: blue;
+    font-weight: bold;
+    font-size: 30px;
+    animation: fadeOut 8s linear backwards infinite;
+}
+
+div::before {
+    content: 'ANIMATION';
+    position: absolute;
+    top: 15px;
+    left: 120%;
+    color: blue;
+    font-weight: bold;
+    font-size: 30px;
+    opacity: 0;
+    animation: fadeIn 8s linear backwards infinite 8s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        z-index: 1;
+        display: none;
+        position: fixed;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        z-index: -5;
+        display: none;
+        position: fixed;
+    }
+    to {
+        opacity: 1;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,68 @@
+body {
+    background-color: #232323;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 10px;
+    justify-content: center;
+    transform: rotate(180deg);
+}
+
+.container div {
+    width: 20px;
+    background-color: white;
+    border-radius: 10px;
+    animation: animatie 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.container div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.container div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.container div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.container div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.container div:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.container div:nth-child(6) {
+    animation-delay: 0.2s;
+}
+
+.container div:nth-child(7) {
+    animation-delay: 0.1s;
+}
+
+.container div:nth-child(8) {
+    animation-delay: 0s;
+}
+
+@keyframes animatie {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0px;
+    }
+}

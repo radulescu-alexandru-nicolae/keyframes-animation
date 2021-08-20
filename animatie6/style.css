@@ -1,0 +1,69 @@
+body {
+    background-color: #232323;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tavan {
+    width: 500px;
+    height: 30px;
+    background-color: white;
+}
+
+.container-body {
+    height: 300px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+}
+
+.dreapta {
+    height: 90%;
+    width: 5px;
+    background-color: white;
+    position: relative;
+    margin-top: -30px;
+}
+
+.dreapta:nth-child(1) {
+    animation: animatieleft 1.5s backwards alternate infinite;
+}
+
+.dreapta:nth-child(5) {
+    animation: animatieright 1.5s backwards alternate infinite 1.5s;
+}
+
+.dreapta::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: -50px;
+    left: -35px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+@keyframes animatieleft {
+    from {
+        transform: rotate(0deg) translateX(30px);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes animatieright {
+    from {
+        transform: rotate(0deg) translateX(-30px);
+    }
+    to {
+        transform: rotate(-30deg);
+    }
+}

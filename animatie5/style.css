@@ -1,0 +1,101 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232323;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    flex-direction: column;
+}
+
+.text {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    ;
+    line-height: 0px;
+    z-index: 10;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+section div {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: flex-end;
+    animation: animatie 5s linear infinite;
+    transform: translateY(100px);
+}
+
+section {
+    overflow: hidden;
+}
+
+section div:nth-child(1) {
+    animation-delay: 2s;
+}
+
+section div:nth-child(2) {
+    animation-delay: 3.2s;
+}
+
+section div:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+section div:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+section div:nth-child(5) {
+    animation-delay: 0.1s;
+}
+
+section div:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+section div:nth-child(7) {
+    animation-delay: 0s;
+}
+
+section div:nth-child(8) {
+    animation-delay: 2.25s;
+}
+
+div span {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    animation: rotate 12s linear infinite;
+}
+
+@keyframes animatie {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        background-color: white;
+    }
+    to {
+        transform: rotate(180deg);
+        background-color: gray;
+    }
+}
