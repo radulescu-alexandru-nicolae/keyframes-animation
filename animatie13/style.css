@@ -1,0 +1,84 @@
+body {
+    background-color: #232323;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    animation: animatie 2s linear infinite;
+}
+
+.podea {
+    padding: 5px;
+    background-color: white;
+}
+
+span {
+    width: 30px;
+    height: 50px;
+    background-color: white;
+    display: block;
+    position: relative;
+    transform: rotate(60deg);
+    animation: animatieCub 2s linear infinite;
+}
+
+span::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(60deg);
+    background-color: white;
+}
+
+span::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(-60deg);
+    background-color: white;
+}
+
+@keyframes animatieCub {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 100%;
+        transform: rotate(360deg);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animatie {
+    0% {
+        transform: rotate(30deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}

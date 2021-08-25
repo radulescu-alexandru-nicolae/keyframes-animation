@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li {
+    list-style: none;
+    border: 2px solid rgb(10, 14, 138);
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+ul li i {
+    position: relative;
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 1px dashed rgb(10, 14, 138);
+    border-radius: 50%;
+}
+
+ul li:hover::after {
+    animation: animatie 0.5s linear infinite;
+}
+
+ul li:hover .container-i {
+    animation: animatiebackgroudn 0.5s linear infinite;
+}
+
+.container-i {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.5s all;
+    color: rgb(10, 14, 138);
+}
+
+
+/* ul li::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 1px solid rgb(10, 14, 138);
+} */
+
+@keyframes animatie {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animatiebackgroudn {
+    from {
+        background-color: rgb(10, 14, 138);
+        color: white;
+        transform: scale(1.1);
+    }
+    to {
+        background-color: rgb(10, 14, 138);
+        color: white;
+        transform: scale(1.1);
+    }
+}
